@@ -1,137 +1,182 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
-    <meta charset="utf-8">  
-    <title>Задание 3</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Андрей Кучер">
+    <title>4 задание</title>
+    <!--Подключаем css-->
+    <link rel="stylesheet" href="4.css">
+    <!--Подключаем Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body style="margin:0;">
-<nav class="navbar">
-    <div class="container">
-        <!--<img class="image"  src="image.png" alt="">-->
-        <a href="#" class="navbar-brand">BeGreate</a>
-        
-        <div class="navbar-wrap">
-            <ul class="navbar-menu">
-                <li><a href="#">Информация</a></li>
-                <li><a href="#">Примеры работ</a></li>
-                <li><a href="#">Сотрудники</a></li>
-                <li><a href="#">Прайс-лист</a></li>
-            </ul>
+<body class="root">
+<header id="head">
+    <div class="container"> <!--container-fluid для 100% ширины-->
+        <div class="row">
+            <div class="col-12 col-md-4 d-flex justify-content-md-start justify-content-between align-items-center"> <!--md-start -> все идет с первого блока, выделено 4 блока-->
+                <img src="images/img.png" alt="Логотип" class="logo m-3"> <!--margin 3-->
+                <h5 class="name-project m-0">BeGreate</h5> 
+            </div>
+            <div class="col-12 col-md-8 d-flex justify-content-md-end flex-column justify-content-center align-items-center flex-md-row"> <!--md-end -> все идет с конца блока, выделено 8 блоков-->
+                <nav>
+                    <ul class="nav-wraper m-0 p-0"> <!--margin и padding равны нулю-->
+                        <li class="d-md-inline-block d-block m-2 text-center"><a href="#head" class="nav-item">В начало</a></li>
+                        <li class="d-md-inline-block d-block m-2 text-center"><a href="#links" class="nav-item">Ссылки</a></li>
+                        <li class="d-md-inline-block d-block m-2 text-center"><a href="#tables" class="nav-item">Таблица</a></li>
+                        <li class="d-md-inline-block d-block m-2 text-center"><a href="#bottom" class="nav-item">В конец</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
-</nav>
-<div class="center">
-<div class="colorwant">
-<ul>
-<li><a href="http://www.kubsu.ru/">КубГУ</a></li>
-<li><a href="https://kubsu.ru/">Ссылка на КубГУ</a></li>
-<!--<a href="https://www.kubsu.ru/"><img src="image.png" width="200" height="200"></a>-->
-<li><a href="/secondfile.html">Сокращенная ссылка на внутреннюю страницу</a></li>
-<li><a href="/index.html">Сокращенная ссылка на главную страницу</a></li>
-<li><a href="#object">Ссылка на фрагмент текущей страницы</a></li>
-<li><a href="/index.html?par1=a&par2=b&par3=c">Ссылка с тремя параметрами</a></li>
-<li><a href="#">Ссылка с id</a></li>
-<li><a href ="./secondfile.html">Относительная ссылка на страницу в текущем каталоге</a></li>
-<li><a href ="./about/file.html">Относительная ссылка на страницу в каталоге about</a></li>
-<li><a href ="../about/file.html">Относительная ссылка на страницу в каталоге уровнем выше текущего</a></li>
-<li><a href ="../../about/file.html">Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a></li>
-<li>Текст с <a href="file.html">контекстной ссылкой</a> внутри него</li>
-<li><id="object">Объект текущей страницы</li>   
-<li><a href="https://ru.wikipedia.org/wiki/Вторая_мировая_война#Битва_за_Атлантику">Ссылка на фрагмент со стороннего ресурса</a></li>
-<!--<li>Ссылки с областями картинки</p> <img src="F:\Документы Андрея\Дизайн студия\Задание 1\122.jpg" width="300" height="200" usemap="#imag" alt="Области картинки"></li>
-            <map name="imag"><area shape="circle" coords="20,25,200" href="15c.html" alt="circle">
-                <area shape="rect" coords="140,100,900,140" href="15r.html" alt="rect">
-            </map>-->
-<li><a href="">Пустая ссылка</a></li>
-<li><a>Ссылка без href</a></li>
-<li><a href="http://www.kubsu.ru/" rel="nofollow">Ссылка по которой запрещен переход поисковикам</a></li>
-<li><a href="https://example.com/" rel="noindex">Ссылка без индексации</a></li>
-<p><ol start="1" type="a">
-    <li><a href="Ссылка1.html" title="Сайт 1">Сайт 1</a></li>
-    <li><a href="Ссылка2.html" title="Сайт 2">Сайт 2</a></li>
-    <li><a href="Ссылка3.html" title="Сайт 3">Сайт 3</a></li>
-</ol><p>
-<li><a href="ftp://log:parol@adress.ru/F:\Документы Андрея\Дизайн студия\Задание 1\Документ.txt">Скачать файл по FTP протоколу</a></li>
-</ul> 
-</div>
-<!--ТЕГИ-->
-
-<!--Таблица-->
-<!--<caption id="a2">Таблица</caption>-->
-<div style="margin: 20px;">
-<table border="1">
-<caption></caption>
-<tr>
-<th class="change">Урок/Класс</th>
-<th>Класс А</th>
-<th>Класс Б</th>
-<th>Класс В</th>
-</tr>
-<tr>
-<td class="change1">1 урок</td>
-<td>Математика</td>
-<td>Русский язык</td>
-<td>Обществознание</td>
-</tr>
-<tr>
-<td class="change1">2 урок</td>
-<td>Русский язык</td>
-<td>История</td>
-<td>Математика</td>
-</tr>
-<tr>
-<td class="change1">3 урок</td>
-<td>Физкултура</td>
-<td>Обществознание </td>
-<td>Информатика</td>
-</tr>
-</table>
-</div>
-<!--Таблица-->
-
-<!--ФОРМА-->
-<div class="colorwantform">
- <h2 style="margin-left: 20px;">Форма:</h2> 
-  <form class="form" action="/" method="POST">  <label> 
- ФИО:<br /> 
- <input type="text" name="student_name" placeholder="Иванов Иван Иванович"> 
- </label><br /> 
- <label> 
- Номер телефона:<br /> 
- <input type="number" name="student_pnone"> 
- </label><br /> 
-  <label> 
- Email:<br /> 
- <input type="email" name="email" placeholder="Введите почту"> 
- </label><br /> 
- <label> 
- Дата рождения:<br /> 
- <input type="date" name="date"> 
- </label><br /> 
- <label> 
- Пол:<br /> 
- <input name=sex type="radio" value="male"> 
- Мужской</label> 
- <label> 
- <input name=sex type="radio" value="female"> 
- Женский</label> <br /> 
- <label> 
- Любимый язык программирования:<br> 
- <select name="Mas[]" multiple="multiple"> 
- <option value="Pascal">Pascal</option> 
- <option value="C">C</option> 
- <option value="C++">C++</option> 
- <option value="JavaScript">JavaScript</option> 
- <option value="PHP">PHP</option> 
- <option value="Python" selected="selected">Python</option> 
- <option value="Java">Java</option><p>
- </select>
- </label>
-  </form>
-</div>
-</div>
- <!--ФОРМА-->
- 
- </body>
- </html>
+</header>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 mx-auto d-flex flex-column justify-content-center align-items-center">
+                <div class="front-block my-3 order-2 order-md-0">
+                    <ol id="links" class="list px-md-5 px-3">
+                        <li class="m-3 m-sm-2"><a href="https://kubsu.ru/">абсолютная ссылка КубГу в протаколе https</a></li>
+                        <li class="m-3 m-sm-2"><a href="/images/img.png"><img class="imgHref w-25" src="images/img.png" alt="цветок"></a></li>
+                        <li class="m-3 m-sm-2"><a href="./page3.html">cокращенная ссылка на внутреннюю страницу</a></li>
+                        <li class="m-3 m-sm-2"><a href="./index.html">ссылка на главную</a></li>
+                        <li class="m-3 m-sm-2"><a href="#bottom">нижняя часть страницы(фрагмент текущей)</a></li>
+                        <li class="m-3 m-sm-2"><a href="http://kubsu.ru/?product=socks&color=black&size=m">ссылка с тремя параметрами кубгу</a>
+                        </li>
+                        <!--  параметры выдумал, так не знаю какие они есть конкретно на сайте универа  -->
+                        <li class="m-3 m-sm-2"><a href="https://en.wikipedia.org/wiki/Web_browsing_history?id=Research">Ссылка с параметром id</a>
+                        </li>
+                        <li class="m-3 m-sm-2"><a href="./page2.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+                        <li class="m-3 m-sm-2"><a href="about1/about1.html">Относительная ссылка на about в каталоге about</a></li>
+                        <!-- ссылка на католог выше находится в about1.html -->
+                        <li class="m-3 m-sm-2"><a href="./level1/level2/page3.html">ссылка на два каталога ниже(выше на 2 будет на странице под
+                            этой
+                            ссылке)</a></li>
+                        <li class="m-3 m-sm-2"><p>Мы все учимся в <a id="aInText" href="https://kubsu.ru/">КубГу</a>(контекстная ссылка в тексте)
+                        </p>
+                        </li>
+                        <li class="m-3 m-sm-2"><a href="https://en.wikipedia.org/wiki/Web_browsing_history#Personalized_pricing">ссылка на секцию в
+                            стороннем
+                            сайте</a></li>
+                        <li class="m-3 m-sm-2"><p>map, левый верхний и правый нижний угол</p>
+                            <map name="Image">
+                                <area href="https://kubsu.ru/" shape="rect" coords="0,0,100,100"
+                                      alt="ссылка на квадратном объекте">
+                                <area href="https://kubsu.ru/" shape="circle" coords="200,200,25"
+                                      alt="ссылка на круглом объекте">
+                            </map>
+                            <img src="./images/img.png" usemap="#Image" alt="цветок" class="imgHref w-25">
+                        </li>
+                        <li class="m-3 m-sm-2"><a href="">ссылка с пустым href</a></li>
+                        <li class="m-3 m-sm-2"><a> ссылка без href</a></li>
+                        <li class="m-3 m-sm-2"><a href="https://kubsu.ru/" rel="nofollow">ссылка по которой нельзя следовать яндексу</a></li>
+                        <li class="m-3 m-sm-2">
+                            <!--noindex--><a href="https://kubsu.ru/">ссылка по которой нельзя индексировать яндексу</a><!--/noindex-->
+                        </li>
+                        <li class="m-3 m-sm-2">
+                            <ol>
+                                <li title="первый"><a href="page2.html">ссылка в списке 1</a></li>
+                                <li title="второй"><a href="./level1/level2/page3.html">ссылка в списке 2</a></li>
+                                <li title="третий"><a href="about1/about1.html">ссылка в списке 3</a></li>
+                            </ol>
+                        </li>
+                        <li class="m-3"><a href="ftp://demo:demo@http://demo.wftpserver.com/main.html/download/Summer.jpg">ftp файл</a></li>
+                        <li class="m-3 mb-sm-3"><a href="./components/form.html">форма</a></li>
+                    </ol>
+                </div>
+                <div class="front-block col-12 p-3">
+                    <div class="form-wrapper col-12 col-md-10 mx-auto d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="text-white">Форма</h2>
+                        <form method="post" action="/" class="forms p-2">
+                            <label>
+                                <br />
+                                <input placeholder="ФИО" />
+                            </label><br />
+                            <label>
+                                <input type="tel" placeholder="Телефон" />
+                            </label><br />
+                            <label>
+                                <input type="email" placeholder="e-mail" />
+                            </label><br />
+                            <label>
+                                Дата рождения <br/>
+                                <input type="date" />
+                            </label><br />
+                            <label>
+                                <input type="radio" value="male" />
+                                мужской</label>
+                            <label>
+                                <input type="radio" value="female" />
+                                женский</label> <br />
+                            <label>
+                                <br />
+                                <select>
+                                    <option disabled>Любимый язык программирования</option>
+                                    <option value="Js">Js</option>
+                                    <option value="C++" >C++</option>
+                                    <option value="Pascal" >Pascal</option>
+                                    <option value="PHP" >PHP</option>
+                                    <option value="Python" >Python</option>
+                                    <option value="Java" >Java</option>
+                                    <option value="Haskel" >Haskel</option>
+                                    <option value="Clojure" >Clojure</option>
+                                    <option value="Prolog" >Prolog</option>
+                                    <option value="Scala" >Scala</option>
+                                    <option value="C" >C</option>
+                                </select>
+                            </label><br />
+                            <label>
+                                <textarea placeholder="Bio"></textarea>
+                            </label><br />
+                            <label>
+                                С контрактом ознакомился
+                                <input type="checkbox">
+                            </label><br />
+                            <input type="submit" value="Отправить" />
+                        </form>
+                    </div>
+                </div>
+                <div class="front-block first-table col-12 my-3 p-3 order-0 order-md-1">
+                    <table class="table-bordered mx-auto w-75 border-1">
+                        <tr>
+                            <th>Урок/Класс</th>
+                            <th>Класс А</th>
+                            <th>Класс Б</th>
+                            <th>Класс В</th>
+                        </tr>
+                        <tr class="chet-item">
+                            <td>1 урок</td>
+                            <td>Математика</td>
+                            <td>Русский язык</td>
+                            <td>Общество</td>
+                        </tr>
+                        <tr>
+                            <td>2 урок</td>
+                            <td>Русский язык</td>
+                            <td>История</td>
+                        </tr>
+                        <tr class="chet-item">
+                            <td>3 урок</td>
+                            <td colspan="2" >Физ-ра</td>
+                            <td>ИКТ</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md d-flex flex-column justify-content-center align-items-center"> <!--margin-->
+                <!--<a id="bottom"></a>
+                <img class="logo logo-footer m-3" src="images/img.png" alt="logo">-->
+                <p class="mb-2">Студент: Андрей Кучер</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
